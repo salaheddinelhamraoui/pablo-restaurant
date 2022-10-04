@@ -5,6 +5,7 @@ import { useFonts } from "expo-font";
 
 import Login from "./screens/login/Login";
 import Dashboard from "./screens/dashboard/Dashboard";
+import NewClient from "./screens/newClient/NewClient";
 
 const theme = {
   ...DefaultTheme,
@@ -34,6 +35,7 @@ export default function App() {
       >
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Dashboard" component={Dashboard} />
+        <Stack.Screen name="NewClient" component={NewClient} />
       </Stack.Navigator>
     </NavigationContainer>
   );

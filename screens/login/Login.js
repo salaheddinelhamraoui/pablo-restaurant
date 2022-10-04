@@ -28,7 +28,7 @@ const Login = () => {
                             resizeMode="contain"
                             className="w-[95px] h-[95px] mx-[44px] my-[32px]"
                         />
-                        <Text className="font-GilroyExtraBold break-words mr-[44px] text-dark-gray" style={{ fontFamily: FONTS.bold, fontSize: SIZES.extraLarge }}>
+                        <Text className="font-GilroyExtraBold break-words mr-[44px] text-dark-gray-2" style={{ fontFamily: FONTS.bold, fontSize: SIZES.extraLarge }}>
                             PANEL DE {"\n"}CONTROL
                         </Text>
 

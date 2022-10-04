@@ -13,6 +13,9 @@ import {
 } from "react-native-chart-kit";
 
 const Dashboard = () => {
+    
+    const navigation = useNavigation();
+
     const data = {
         labels: ["18-12", "19-12", "20-12", "21-12", "22-12", "23-12", "24-12"],
         datasets: [
@@ -62,7 +65,7 @@ const Dashboard = () => {
                 </View>
                 <ScrollView>
                     <View
-                        className="bg-white my-[20px] mx-[13px] rounded-2xl grow "
+                        className="bg-white my-[20px] mx-[13px] rounded-2xl grow pb-16"
                     >
                         <View
                             className="flex flex-col items-center w-full"
@@ -128,8 +131,6 @@ const Dashboard = () => {
 
                                     </View>
                                 </View>
-
-
                             </View>
                         </View>
                         <View
@@ -140,25 +141,131 @@ const Dashboard = () => {
                             >
                                 <View>
                                     <Text style={{ fontFamily: FONTS.bold, fontSize: SIZES.medium }}>
-                                        View summary
+                                    Clients
                                     </Text>
                                 </View>
+
 
 
                             </View>
                             <View
                                 className="bg-white rounded-2xl w-full px-4 py-4"
                             >
+                                <View
 
+                                    className="bg-gray  mx-[12px] rounded-2xl "
+                                >
+                                <TextInput
+                                            placeholder="BOSCAR CLIENT"
+                                            style={{ flex: 1 }}
+                                            onChangeText={() => {}}
+                                            className="bg-white rounded-lg px-2 py-1 m-4"
+                                 />
 
+                                 <View className="flex flex-row m-2 justify-between pb-6">
+                                 <ScrollView horizontal={true} removeClippedSubviews={true} >
+                                 <View className="bg-white p-4 rounded-lg ml-3 mr-4 " style={{
+                                            fontSize: SIZES.small,
+                                    }}>
+                                    <Text className="text-dark-gray-2 mb-4 " style={{
+                                            fontSize: SIZES.small,
+                                    }}>
+                                        Company or Legal Name
+                                    </Text>
+                                    <Text className="text-dark-gray-2" style={{
+                                            fontSize: SIZES.small,
+                                    }}>
+                                        Legal Address 1
+                                    </Text>
+                                    <Text className="text-dark-gray-2" style={{
+                                            fontSize: SIZES.small,
+                                    }}>
+                                        Legal Address 2
+                                    </Text>
+                                    <Text className="mt-2" style={{
+                                        fontFamily: FONTS.bold,
 
+                                       
+                                    }}>
+                                        FIN
+                                    </Text>
+                                    </View>
+                                    <View className="bg-white p-4 rounded-lg  mr-4">
+                                    <Text className="text-dark-gray-2 mb-4" style={{
+                                            fontSize: SIZES.small,
+                                    }}>
+                                        Company or Legal Name
+                                    </Text>
+                                    <Text className="text-dark-gray-2" style={{
+                                            fontSize: SIZES.small,
+                                    }}>
+                                        Legal Address 1
+                                    </Text>
+                                    <Text className="text-dark-gray-2" style={{
+                                            fontSize: SIZES.small,
+                                    }}>
+                                        Legal Address 2
+                                    </Text>
+                                    <Text className="mt-2" style={{
+                                        fontFamily: FONTS.bold,
+                                       
+                                    }}>
+                                        FIN
+                                    </Text>
+                                    </View>
+                                    <View className="bg-white p-4 rounded-lg  mr-4 bg-light-pink">
+                                    <Text className="text-dark-gray-2 mb-4" style={{
+                                            fontSize: SIZES.small,
+                                    }}>
+                                        Company or Legal Name
+                                    </Text>
+                                    <Text className="text-dark-gray-2" style={{
+                                            fontSize: SIZES.small,
+                                    }}>
+                                        Legal Address 1
+                                    </Text>
+                                    <Text className="text-dark-gray-2" style={{
+                                            fontSize: SIZES.small,
+                                    }}>
+                                        Legal Address 2
+                                    </Text>
+                                    <Text className="mt-2" style={{
+                                        fontFamily: FONTS.bold,
+                                       
+                                    }}>
+                                        FIN
+                                    </Text>
+                                    </View>
+                                    </ScrollView>
+                                    
+                                 </View>
+                                
+                            </View>
+                            <View className="pt-8 flex justify-center items-center">
+                                <Pressable onPress={() => {
+                                    navigation.navigate("NewClient")
+                                }} className="bg-light-blue w-[240px] rounded-lg px-8 py-4">
+                                    <View className="flex flex-row justify-center items-center">
+                                        <Text className="text-white text-center" style={{ fontSize: SIZES.extraMedium, fontFamily: FONTS.bold }}> ADD NEW CLIENT </Text>
+                                    </View>
+                                </Pressable>
+                            </View>
+                            <View className="pt-4 flex justify-center items-center">
+                                <Pressable onPress={() => {
+                                    navigation.navigate("NewClient")
+                                }} className="bg-light-blue w-[240px] rounded-lg px-8 py-4">
+                                    <View className="flex flex-row justify-center items-center">
+                                        <Text className="text-white text-center" style={{ fontSize: SIZES.extraMedium, fontFamily: FONTS.bold }}> ADD NEW FRACHISE </Text>
+                                    </View>
+                                </Pressable>
+                            </View>
                             </View>
                         </View>
                     </View>
 
                 </ScrollView>
 
-
+                
             </View>
 
         </SafeAreaView>
