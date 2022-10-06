@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, SafeAreaView, TextInput, Image, Text, Pressable } from 'react-native';
-import { FocusedStatusBar } from "../../components";
+import { FocusedStatusBar } from "../../shared/components";
 import { COLORS, FONTS, SIZES, assets } from "../../constants";
 import { useNavigation } from "@react-navigation/native";
 

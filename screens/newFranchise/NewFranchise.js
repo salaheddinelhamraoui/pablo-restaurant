@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faUser, faGear } from '@fortawesome/free-solid-svg-icons'
 
 
-const NewClient = () => {
+const NewFranchise = () => {
 
     const [isKeyboardVisible, setKeyboardVisible] = useState(false);
     const [scroolPosition, setScroolPosition] = useState(0);
@@ -136,4 +136,4 @@ const NewClient = () => {
     )
 }
 
-export default NewClient
+export default NewFranchise

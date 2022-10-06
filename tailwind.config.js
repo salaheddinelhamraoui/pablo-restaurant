@@ -11,11 +11,15 @@ module.exports = {
         'secondary': "#DDE2C6",
         'dark': "#090C02",
         'red': "#A72608",
+        'dark-red': "#C17171",
+        'light-red': "#F0350B",
         'dark-gray': "#BBC5AA",
         'gray': "#F2F2F2",
         'dark-gray-2': "#565958",
+        'light-gray': "#A19898",
         'light-blue': '#4ABFD9',
-        'light-pink': "#FFECE1"
+        'light-pink': "#FFECE1",
+        'green': "#71BC44"
       },
     },
   },
