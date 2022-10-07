@@ -29,14 +29,19 @@ const Dashboard = () => {
     };
 
     const chartConfig = {
-        backgroundGradientFrom: "#f7f7f700",
-        backgroundGradientFromOpacity: 0,
-        backgroundGradientTo: "#f7f7f700",
-        backgroundGradientToOpacity: 0.5,
-        color: (opacity = 1) => `#000`,
-        strokeWidth: 2, // optional, default 3
+        backgroundGradientFrom: "#ffffff",
+        backgroundGradientFromOpacity: 1,
+        backgroundGradientTo: "#ffffff",
+        backgroundGradientToOpacity: 1,
+        color: (opacity = 1) => `#4ABFD9`,
+        labelColor: (opacity = 1) => `#000`,
+        strokeWidth: 0, // optional, default 3
         barPercentage: 0.5,
-        useShadowColorFromDataset: false // optional
+        useShadowColorFromDataset: false ,// optional
+        propsForBackgroundLines: {
+            strokeWidth: 0
+        }
+
     };
 
     const handleScroll = (e) => {
@@ -93,7 +98,7 @@ const Dashboard = () => {
                                     <View
                                         className="flex flex-row w-full"
                                     >
-                                        <View className="p-4 pr-0 flex flex-col w-[35%]">
+                                        <View className="p-4 pr-0 flex flex-col w-[23%]">
                                             <View className="">
                                                 <Text style={{ fontFamily: FONTS.light, fontSize: SIZES.small }}>
                                                     Total
@@ -126,6 +131,7 @@ const Dashboard = () => {
                                                 height={220}
                                                 verticalLabelRotation={30}
                                                 chartConfig={chartConfig}
+                                                style={{ padding: 4}}
                                                 bezier
                                             />
                                         </ScrollView>
@@ -164,8 +170,8 @@ const Dashboard = () => {
                                         className="bg-white rounded-lg px-2 py-1 m-4"
                                     />
 
-                                    <View className="flex flex-row flex-wrap m-2 justify-center pb-6">
-                                        <View className="bg-white p-4 rounded-lg mb-4" style={{
+                                    <View className="flex flex-row flex-wrap m-2 mt-0 justify-around ">
+                                        <View className="bg-white w-[30%] px-2 py-2 rounded-lg " style={{
                                             fontSize: SIZES.small,
                                         }}>
                                             <Text className="text-dark-gray-2 mb-4 " style={{
@@ -191,7 +197,7 @@ const Dashboard = () => {
                                                 FIN
                                             </Text>
                                         </View>
-                                        <View className="bg-white p-4 rounded-lg mb-4">
+                                        <View className="bg-white w-[30%] px-2 py-2 rounded-lg ">
                                             <Text className="text-dark-gray-2 mb-4" style={{
                                                 fontSize: SIZES.small,
                                             }}>
@@ -214,7 +220,7 @@ const Dashboard = () => {
                                                 FIN
                                             </Text>
                                         </View>
-                                        <View className="bg-white p-4 rounded-lg  mb-4 bg-light-pink">
+                                        <View className="bg-white w-[30%] px-2 py-2 rounded-lg   bg-light-pink ">
                                             <Text className="text-dark-gray-2 mb-4" style={{
                                                 fontSize: SIZES.small,
                                             }}>

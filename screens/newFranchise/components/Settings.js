@@ -50,7 +50,7 @@ const Settings = () => {
                 <Text style={{ fontFamily: FONTS.bold, fontSize: SIZES.extraMedium }}>Nutritional conditions</Text>
                 <View className="mt-2 flex flex-row justify-between flex-wrap bg-gray  px-2 rounded-lg pb-3">
 
-                    <View className="flex flex-row mt-3">
+                    <View className="flex flex-row items-center mt-3">
                         <ToggleSwitch
                             isOn={veganoState}
                             onColor="#4ABFD9"
@@ -62,7 +62,7 @@ const Settings = () => {
                         />
                         <Text className="ml-1 text-center" style={{ fontSize: SIZES.small, fontFamily: FONTS.light }}>VEGANO</Text>
                     </View>
-                    <View className="flex flex-row mt-3">
+                    <View className="flex flex-row items-center mt-3">
                         <ToggleSwitch
                             isOn={vegetarianoState}
                             onColor="#4ABFD9"
@@ -74,7 +74,7 @@ const Settings = () => {
                         />
                         <Text className="ml-1 text-center" style={{ fontSize: SIZES.small, fontFamily: FONTS.light }}>VEGETARIANO</Text>
                     </View>
-                    <View className="flex flex-row mt-3">
+                    <View className="flex flex-row items-center mt-3">
                         <ToggleSwitch
                             isOn={noPicantesState}
                             onColor="#4ABFD9"
