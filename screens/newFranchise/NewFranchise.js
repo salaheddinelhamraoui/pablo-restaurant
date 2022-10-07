@@ -57,7 +57,7 @@ const NewFranchise = () => {
                             alignItems: "center",
                         }}
                     >
-                        <Image source={scroolPosition === 0 ? assets.header : assets.header2} resizeMode="cover" className={`w-full ${scroolPosition === 0 ? 'h-[100px]' : 'h-[50px]'}  rounded-lg`} >
+                        <Image source={scroolPosition === 0 ? assets.header : assets.header2} resizeMode="stretch" className={`w-full ${scroolPosition === 0 ? 'h-[100px]' : 'h-[50px]'}  rounded-lg`} >
                         </Image>
                     </View>
                 </View>
@@ -102,11 +102,11 @@ const NewFranchise = () => {
                     !isKeyboardVisible && <View className="absolute bottom-2  right-2 left-2 bg-dark-gray-2 h-[70px] rounded-lg" style={[
                         {
                             shadowOffset: {
-                                width: 1,
-                                height: 8
+                                width: 7,
+                                height: 12
                             },
-                            shadowOpacity: 45,
-                            shadowRadius: 3.84,
+                            shadowOpacity: 2,
+                            shadowRadius: 18,
                         }
                     ]}>
                         <View className="flex flex-row justify-around items-center h-full">

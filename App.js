@@ -7,6 +7,7 @@ import Login from "./screens/login/Login";
 import Dashboard from "./screens/dashboard/Dashboard";
 import NewClient from "./screens/newClient/NewClient";
 import NewFranchise from "./screens/newFranchise/NewFranchise";
+import Tickets from "./screens/tickets/Tickets";
 
 const theme = {
   ...DefaultTheme,
@@ -38,6 +39,7 @@ export default function App() {
         <Stack.Screen name="Dashboard" component={Dashboard} />
         <Stack.Screen name="NewClient" component={NewClient} />
         <Stack.Screen name="NewFranchise" component={NewFranchise} />
+        <Stack.Screen name="Tickets" component={Tickets} />
       </Stack.Navigator>
     </NavigationContainer>
   );

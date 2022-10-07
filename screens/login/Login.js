@@ -72,6 +72,15 @@ const Login = () => {
                                     </View>
                                 </Pressable>
                             </View>
+                            <View className="pt-8 flex justify-center items-center">
+                                <Pressable onPress={() => {
+                                    navigation.navigate("Tickets")
+                                }} className="bg-light-blue w-[150px] rounded-lg px-8 py-4">
+                                    <View className="flex flex-row justify-center items-center">
+                                        <Text className="text-white text-center" style={{ fontSize: SIZES.large }}> FR </Text>
+                                    </View>
+                                </Pressable>
+                            </View>
 
 
                         </View>

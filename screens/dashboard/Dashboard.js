@@ -3,14 +3,7 @@ import { View, SafeAreaView, TextInput, Image, Text, Pressable, StyleSheet, Butt
 import { FocusedStatusBar } from "../../shared/components";
 import { COLORS, FONTS, SIZES, assets } from "../../constants";
 import { useNavigation } from "@react-navigation/native";
-import {
-    LineChart,
-    BarChart,
-    PieChart,
-    ProgressChart,
-    ContributionGraph,
-    StackedBarChart
-} from "react-native-chart-kit";
+import { LineChart } from "react-native-chart-kit";
 
 const Dashboard = () => {
 
@@ -66,7 +59,7 @@ const Dashboard = () => {
                             alignItems: "center",
                         }}
                     >
-                        <Image source={scroolPosition === 0 ? assets.header : assets.header2} resizeMode="cover" className={`w-full ${scroolPosition === 0 ? 'h-[100px]' : 'h-[50px]'}  rounded-lg`} >
+                        <Image source={scroolPosition === 0 ? assets.header : assets.header2} resizeMode="stretch" className={`w-full ${scroolPosition === 0 ? 'h-[100px]' : 'h-[50px]'}  rounded-lg`} >
                         </Image>
                     </View>
                 </View>

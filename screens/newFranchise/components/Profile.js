@@ -1,9 +1,14 @@
 import { View, Text, TextInput } from 'react-native'
 import ToggleSwitch from 'toggle-switch-react-native';
 import { COLORS, FONTS, SIZES, assets } from "../../../constants";
-import { useState } from "react"
+import { useState } from "react";
+import CountryPicker from 'rn-country-dropdown-picker';
 
 const Profile = () => {
+
+    function handleSelection(e) {
+        console.log(e);
+      }
 
     const [isSwitchOn, setIsSwitchOn] = useState(false);
 
@@ -20,6 +25,7 @@ const Profile = () => {
             </View>
             <View className="flex flex-col mt-2">
                 <Text style={{ fontFamily: FONTS.bold, fontSize: SIZES.extraMedium }}>Phone *</Text>
+                <CountryPicker selectedItem={handleSelection} />
                 <TextInput
                     placeholder=""
                     style={{ flex: 1 }}
