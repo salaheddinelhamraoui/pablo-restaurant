@@ -14,7 +14,7 @@ import { FocusedStatusBar } from "../../shared/components";
 import { COLORS, FONTS, SIZES, assets } from "../../constants";
 import { useNavigation } from "@react-navigation/native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import { faChevronDown, faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faDownload, faIcons } from "@fortawesome/free-solid-svg-icons";
 import { LineChart } from "react-native-chart-kit";
 import TicketCard from "./components/TicketCard";
 
@@ -85,7 +85,7 @@ const Tickets = () => {
                   shadowRadius: 4.65,
                   elevation: 7,
                 }}
-                onChangeText={() => {}}
+                onChangeText={() => { }}
                 className="bg-white rounded-3xl w-[80%] m-auto "
               >
                 <Text
@@ -117,7 +117,7 @@ const Tickets = () => {
                   shadowRadius: 4.65,
                   elevation: 7,
                 }}
-                onChangeText={() => {}}
+                onChangeText={() => { }}
                 className="bg-white rounded-3xl ml-auto "
               >
                 <Text
@@ -256,6 +256,109 @@ const Tickets = () => {
             </View>
           </View>
         </ScrollView>
+      </View>
+      <View className="absolute bottom-0  w-full bg-white h-[65px]  rounded-t-xl px-4 py-2" style={{
+        shadowColor: "#565958",
+
+        shadowOffset: {
+          width: 0,
+          height: 3,
+        },
+        shadowOpacity: 0.29,
+        shadowRadius: 4.65,
+        elevation: 7,
+      }}>
+        <View className="flex flex-row items-center justify-around h-full pb-6 mt-2">
+          <Pressable onPress={() => { }} className="">
+            <View className="flex flex-col justify-center items-center">
+              <FontAwesomeIcon
+                icon={faIcons}
+                size={20}
+                color={"#000"}
+              />
+              <Text className="mt-1" style={{
+                fontFamily: FONTS.light,
+                fontWeight: "700",
+                fontSize: SIZES.base
+              }}>
+
+                TICKETS
+              </Text>
+            </View>
+          </Pressable>
+
+          <Pressable onPress={() => { }} className="">
+            <View className="flex flex-col justify-center items-center">
+              <FontAwesomeIcon
+                icon={faIcons}
+                size={20}
+                color={"#000"}
+              />
+              <Text style={{
+                fontFamily: FONTS.light,
+                fontWeight: "700",
+                fontSize: SIZES.base
+              }}
+                className="mt-1">
+                RESTAURANT
+              </Text>
+            </View>
+          </Pressable>
+          <Pressable onPress={() => { }} className="">
+            <View className="flex flex-col justify-center items-center bg-light-red h-[70px] w-[70px] rounded-full">
+              <FontAwesomeIcon
+                icon={faIcons}
+                size={20}
+                color={"#fff"}
+              />
+              <Text
+                className="mt-1 text-white"
+                style={{
+                  fontFamily: FONTS.light,
+                  fontWeight: "700",
+                  fontSize: SIZES.base
+                }}>
+                PRODUCTS
+              </Text>
+            </View>
+          </Pressable>
+          <Pressable onPress={() => { }} className="">
+            <View className="flex flex-col justify-center items-center">
+              <FontAwesomeIcon
+                icon={faIcons}
+                size={20}
+                color={"#000"}
+              />
+              <Text
+                className="mt-1"
+                style={{
+                  fontFamily: FONTS.light,
+                  fontWeight: "700",
+                  fontSize: SIZES.base
+                }}>
+                PROFILE
+              </Text>
+            </View>
+          </Pressable>
+          <Pressable onPress={() => { }} className="">
+            <View className="flex flex-col justify-center items-center">
+              <FontAwesomeIcon
+                icon={faIcons}
+                size={20}
+                color={"#000"}
+              />
+              <Text
+                className="mt-1"
+                style={{
+                  fontFamily: FONTS.light,
+                  fontWeight: "700",
+                  fontSize: SIZES.base
+                }}>
+                SETTINGS
+              </Text>
+            </View>
+          </Pressable>
+        </View>
       </View>
     </SafeAreaView>
   );
