@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, SafeAreaView, TextInput, Image, Text, Pressable } from 'react-native';
-import { FocusedStatusBar } from "../../shared/components";
+import { FocusedStatusBar } from "../../components";
 import { COLORS, FONTS, SIZES, assets } from "../../constants";
 import { useNavigation } from "@react-navigation/native";
 
@@ -77,12 +77,10 @@ const Login = () => {
                                     navigation.navigate("Tickets")
                                 }} className=" w-[250px] rounded-lg px-8 py-4">
                                     <View className="flex flex-row justify-center items-center">
-                                        <Text className="text-black text-center" style={{ fontSize: SIZES.large }}> franchise  </Text>
+                                        <Text className="text-black text-center" style={{ fontSize: SIZES.large }}> fr  </Text>
                                     </View>
                                 </Pressable>
                             </View>
-
-
                         </View>
                     </View>
                 </View>

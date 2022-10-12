@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { View, SafeAreaView, TextInput, Image, Text, Pressable, StyleSheet, Button, ScrollView } from 'react-native';
-import { FocusedStatusBar } from "../../shared/components";
+import { View, SafeAreaView, TextInput, Image, Text, Pressable, StyleSheet, Button, ScrollView, useWindowDimensions } from 'react-native';
+import { FocusedStatusBar } from "../../components";
 import { COLORS, FONTS, SIZES, assets } from "../../constants";
 import { useNavigation } from "@react-navigation/native";
 import { LineChart } from "react-native-chart-kit";
@@ -9,14 +9,17 @@ const Dashboard = () => {
 
     const navigation = useNavigation();
 
+    const windowWidth = useWindowDimensions().width;
+
     const [scroolPosition, setScroolPosition] = useState(0);
 
     const data = {
-        labels: ["18-12", "19-12", "20-12", "21-12", "22-12", "23-12", "24-12"],
+        labels: ["18-12", "19-12", "20-12"],
         datasets: [
             {
-                data: [200, 400, 208, 550, 800, 909, 400, 220],
-                strokeWidth: 1 // optional
+                data: [200, 400, 208],
+                strokeWidth: 1
+                // optional
             }
         ],
     };
@@ -30,7 +33,7 @@ const Dashboard = () => {
         labelColor: (opacity = 1) => `#000`,
         strokeWidth: 0, // optional, default 3
         barPercentage: 0.5,
-        useShadowColorFromDataset: false ,// optional
+        useShadowColorFromDataset: false,// optional
         propsForBackgroundLines: {
             strokeWidth: 0
         }
@@ -91,7 +94,7 @@ const Dashboard = () => {
                                     <View
                                         className="flex flex-row w-full"
                                     >
-                                        <View className="p-4 pr-0 flex flex-col w-[23%]">
+                                        <View className="p-4 pr-0 flex flex-col w-[25%]">
                                             <View className="">
                                                 <Text style={{ fontFamily: FONTS.light, fontSize: SIZES.small }}>
                                                     Total
@@ -120,11 +123,11 @@ const Dashboard = () => {
                                         <ScrollView horizontal={true} removeClippedSubviews={true} className="p-4" >
                                             <LineChart
                                                 data={data}
-                                                width={280}
-                                                height={220}
-                                                verticalLabelRotation={30}
+                                                height={190}
+                                                width={windowWidth / 2.1}
+                                                verticalLabelRotation={15}
                                                 chartConfig={chartConfig}
-                                                style={{ padding: 4}}
+                                                style={{ padding: 4, borderRadius: 16 }}
                                                 bezier
                                             />
                                         </ScrollView>

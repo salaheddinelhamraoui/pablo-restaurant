@@ -1,16 +1,18 @@
 import { View, Text, TouchableOpacity, Pressable, Image } from "react-native";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FONTS, SIZES, assets } from "../../../constants";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faChevronDown, faChevronUp, faClose } from "@fortawesome/free-solid-svg-icons";
 
-const TicketCard = () => {
-  const [collapsed, setCollapsed] = useState(false);
+const TicketCard = ({ openedTicket, setOpenedTicket, ticketId }) => {
+
 
   return (
     <TouchableOpacity
-      className={`bg-gray mt-4 rounded-lg px-4 py-2 mb-2 z-8 ${collapsed ? 'mb-5' : ''}`}
-      onPress={() => setCollapsed(!collapsed)}
+      className={`bg-gray mt-4 rounded-lg px-4 py-2 mb-2 z-8 ${openedTicket === ticketId ? 'mb-6' : ''}`}
+      onPress={() => {
+        setOpenedTicket(ticketId);
+      }}
     >
       <View className="flex flex-col">
         <View className="flex flex-row">
@@ -33,7 +35,7 @@ const TicketCard = () => {
               Legal Address
             </Text>
             {
-              collapsed && <Text
+              openedTicket === ticketId && <Text
                 style={{
                   fontFamily: FONTS.light,
                   fontSize: SIZES.small,
@@ -44,7 +46,7 @@ const TicketCard = () => {
               </Text>
             }
             {
-              collapsed && <Text
+              openedTicket === ticketId && <Text
                 style={{
                   fontFamily: FONTS.light,
                   fontSize: SIZES.small,
@@ -76,7 +78,7 @@ const TicketCard = () => {
             </Text>
           </View>
         </View>
-        {collapsed && (
+        {openedTicket === ticketId && (
           <View className="flex flex-col mt-4">
             <View className="flex flex-row justify-between mr-4">
               <Text
@@ -225,7 +227,7 @@ const TicketCard = () => {
             >
               TOTAL
             </Text>
-            {collapsed &&
+            {openedTicket === ticketId &&
               <Text
                 style={{
                   fontFamily: FONTS.light,
@@ -235,7 +237,7 @@ const TicketCard = () => {
                 IVA 21%
               </Text>
             }
-            {collapsed &&
+            {openedTicket === ticketId &&
               <Text
                 style={{
                   fontFamily: FONTS.light,
@@ -265,7 +267,7 @@ const TicketCard = () => {
             >
               22,00
             </Text>
-            {collapsed &&
+            {openedTicket === ticketId &&
               <Text
                 style={{
                   fontFamily: FONTS.light,
@@ -276,7 +278,7 @@ const TicketCard = () => {
                 0,00
               </Text>
             }
-            {collapsed &&
+            {openedTicket === ticketId &&
               <Text
                 style={{
                   fontFamily: FONTS.light,
@@ -291,19 +293,19 @@ const TicketCard = () => {
         </View>
       </View>
       <View className="absolute right-3 top-[50%]">
-        {collapsed ? (
+        {openedTicket === ticketId ? (
           <FontAwesomeIcon icon={faChevronUp} size={16} color={"#000"} />
         ) : (
           <FontAwesomeIcon icon={faChevronDown} size={16} color={"#000"} />
         )}
       </View>
       {
-        collapsed &&
-        <View className="absolute -bottom-7 bg-dark-red right-4 rounded-b-lg left-8 z-1 px-4 py-1">
+        openedTicket === ticketId &&
+        <View className="absolute -bottom-8 bg-red right-4 rounded-b-lg left-8 z-1 px-4 py-1">
           <View className="flex flex-row items-center">
 
             <Pressable onPress={() => { }} className="">
-              <View className="flex flex-col justify-center items-center bg-light-red rouded-xl mr-2  w-[20px] h-[20px] rounded-full">
+              <View className="flex flex-col justify-center items-center border border-white mr-2  w-[25px] h-[25px] rounded-full">
                 <FontAwesomeIcon icon={faClose} size={16} color={'#fff'} />
               </View>
             </Pressable>

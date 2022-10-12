@@ -8,6 +8,12 @@ import Dashboard from "./screens/dashboard/Dashboard";
 import NewClient from "./screens/newClient/NewClient";
 import NewFranchise from "./screens/newFranchise/NewFranchise";
 import Tickets from "./screens/tickets/Tickets";
+import EditRestaurant from "./screens/editRestaurant/EditRestaurant";
+import EditCategories from "./screens/editCategories/EditCategories";
+import EditProducts from "./screens/editProducts/EditProducts";
+import Settings from "./screens/settings/Settings";
+import Profile from "./screens/profile/Profile";
+
 
 const theme = {
   ...DefaultTheme,
@@ -40,6 +46,11 @@ export default function App() {
         <Stack.Screen name="NewClient" component={NewClient} />
         <Stack.Screen name="NewFranchise" component={NewFranchise} />
         <Stack.Screen name="Tickets" component={Tickets} />
+        <Stack.Screen name="EditRestaurant" component={EditRestaurant} />
+        <Stack.Screen name="EditCategories" component={EditCategories} />
+        <Stack.Screen name="EditProducts" component={EditProducts} />
+        <Stack.Screen name="Settings" component={Settings} />
+        <Stack.Screen name="Profile" component={Profile} />
       </Stack.Navigator>
     </NavigationContainer>
   );

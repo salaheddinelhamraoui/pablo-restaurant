@@ -11,7 +11,7 @@ const Profile = () => {
 
     function handleSelection(e) {
         console.log(e);
-      }
+    }
 
 
     return (
