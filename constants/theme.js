@@ -16,7 +16,7 @@ export const SIZES = {
     extraMedium: 16,
     large: 24,
     extraLarge: 26,
-    extraExtraLarge: 36,
+    extraExtraLarge: 34,
 };
 
 export const FONTS = {

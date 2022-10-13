@@ -20,6 +20,8 @@ const Tickets = () => {
   const windowWidth = useWindowDimensions().width;
   const [openedTicket, setOpenedTicket] = useState(0);
 
+  const [scroolPosition, setScroolPosition] = useState(0);
+
 
   const data = {
     labels: ["18-12", "19-12", "20-12"],
@@ -46,12 +48,21 @@ const Tickets = () => {
     },
   };
 
+
+  const handleScroll = (e) => {
+    if (e.nativeEvent.contentOffset.y > 0) {
+      setScroolPosition(1);
+    } else {
+      setScroolPosition(0);
+    }
+  }
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <FocusedStatusBar backgroundColor={COLORS.lightBlue} />
       <View className="flex flex-col h-full">
-        <HeaderBanner />
-        <ScrollView>
+        <HeaderBanner scroolPosition={scroolPosition} />
+        <ScrollView onScroll={handleScroll}>
           <View className="bg-white mb-[20px] mx-[13px] mt-5 rounded-2xl grow pb-16">
             <View className="flex flex-col items-center w-full">
               <View className="w-full px-6 pt-6">

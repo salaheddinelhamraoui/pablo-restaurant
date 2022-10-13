@@ -18,6 +18,19 @@ import france from "../assets/icons/france.svg";
 import catalan from "../assets/icons/catalan.svg";
 import accept from "../assets/icons/accept.svg";
 import cancel from "../assets/icons/cancel.svg";
+import close_2 from "../assets/icons/close_2.svg";
+import menu from "../assets/icons/menu.svg";
+import chart from "../assets/icons/chart.svg";
+import tapas from "../assets/images/tapas.png";
+import pencil from "../assets/icons/pencil.svg";
+import blur from "../assets/images/blur.png";
+import SANDWICHES from "../assets/images/SANDWICHES.png";
+import PIZZAS from "../assets/images/PIZZAS.png";
+import BURGUERS from "../assets/images/BURGUERS.png";
+import POSTRES from "../assets/images/POSTRES.png";
+import COCTELES from "../assets/images/COCTELES.png";
+import BEBIDAS from "../assets/images/BEBIDAS.png";
+
 
 export default {
     recurso,
@@ -39,5 +52,17 @@ export default {
     france,
     catalan,
     accept,
-    cancel
+    cancel,
+    close_2,
+    menu,
+    chart,
+    tapas,
+    pencil,
+    blur,
+    SANDWICHES,
+    PIZZAS,
+    BURGUERS,
+    POSTRES,
+    COCTELES,
+    BEBIDAS
 };

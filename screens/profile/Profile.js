@@ -2,6 +2,7 @@ import { View, Text, SafeAreaView } from 'react-native';
 import HeaderBanner from "../../components/HeaderBanner";
 import FocusedStatusBar from "../../components/FocusedStatusBar";
 import { COLORS, FONTS, SIZES, assets } from "../../constants";
+import BottomNavigation from "../../components/BottomNavigation";
 
 const Profile = () => {
     return (
@@ -11,6 +12,7 @@ const Profile = () => {
                 <HeaderBanner />
                 <Text>Profile</Text>
             </View>
+            <BottomNavigation />
         </SafeAreaView>
     )
 }
