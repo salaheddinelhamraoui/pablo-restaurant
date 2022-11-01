@@ -17,11 +17,10 @@ import BottomNavigation from "./../../components/BottomNavigation";
 import HeaderBanner from "../../components/HeaderBanner";
 
 const Tickets = () => {
+  
   const windowWidth = useWindowDimensions().width;
   const [openedTicket, setOpenedTicket] = useState(0);
-
   const [scroolPosition, setScroolPosition] = useState(0);
-
 
   const data = {
     labels: ["18-12", "19-12", "20-12"],
